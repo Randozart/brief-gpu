@@ -1,0 +1,12 @@
+[target]
+name = "gpu_core"
+clock_hz = 100_000_000
+
+[io]
+"0x40000000" = { name = "gpu_status", width = 8 }
+"0x40000004" = { name = "opcode", width = 4 }
+
+[memory]
+"0x40001000" = { name = "vec_A", size = 512, type = "ram" }
+"0x40002000" = { name = "vec_B", size = 512, type = "ram" }
+"0x40003000" = { name = "vec_R", size = 512, type = "ram" }

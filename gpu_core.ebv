@@ -1,0 +1,25 @@
+let gpu_status: UInt@/x8    @ 0x40000000; 
+let opcode:     UInt@/0..3  @ 0x40000004; 
+
+let vec_A: Int@/x16[256] @ 0x40001000;
+let vec_B: Int@/x16[256] @ 0x40002000;
+let vec_R: Int@/x16[256] @ 0x40003000;
+
+txn vector_alu[a: Int@/x16, b: Int@/x16, op: UInt@/0..3] -> Int@/x16 {
+    [op 0 ==] { a b + term; } 
+    [op 1 ==] { a b - term; } 
+    [op 2 ==] { a b * term; } 
+    [op 3 ==] { a b ^ term; } 
+    [op 4 ==] { a b & term; } 
+    [op 5 ==] { a b << term; } 
+    [op 6 ==] { a b >> term; } 
+    [op 7 ==] { [a 0 <] { 0 term; } a term; }
+    [op 8 ==] { [b 0 ==] { a term; } b term; }
+    term 0; 
+}
+
+rct txn execute [gpu_status == 1] {
+    &vec_R = [vec_A vec_B opcode] vector_alu;
+    &gpu_status = 2;
+    term;
+}
