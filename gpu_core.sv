@@ -1,8 +1,8 @@
 module gpu_core (
     input logic clk,
     input logic rst_n,
-    output logic [7:0] gpu_status // pin: A1,
-    output logic [3:0] opcode // pin: A2
+    output logic [7:0] gpu_status /* pin: A1 */,
+    output logic [3:0] opcode /* pin: A2 */
 );
 
     logic signed [15:0] vec_A [0:255];
@@ -41,32 +41,13 @@ module gpu_core (
         return 0;
     endfunction
 
-    // Logic for variable: gpu_status
-    always_ff @(posedge clk) begin
-        if (!rst_n) begin
-            gpu_status <= 0;
-        end else begin
-            if ((gpu_status == 1)) begin
-                gpu_status <= 2;
-            end
-        end
-    end
-
-    // Logic for variable: opcode
-    always_ff @(posedge clk) begin
-        if (!rst_n) begin
-            opcode <= 0;
-        end else begin
-        end
-    end
-
     // Logic for variable: vec_A
-    genvar i;
+    genvar vec_A_i;
     generate
-        for (i = 0; i < 256; i = i + 1) begin : vec_A_logic
+        for (vec_A_i = 0; vec_A_i < 256; vec_A_i = vec_A_i + 1) begin : vec_A_logic
             always_ff @(posedge clk) begin
                 if (!rst_n) begin
-                    vec_A[i] <= 0;
+                    vec_A[vec_A_i] <= 0;
                 end else begin
                 end
             end
@@ -74,12 +55,12 @@ module gpu_core (
     endgenerate
 
     // Logic for variable: vec_B
-    genvar i;
+    genvar vec_B_i;
     generate
-        for (i = 0; i < 256; i = i + 1) begin : vec_B_logic
+        for (vec_B_i = 0; vec_B_i < 256; vec_B_i = vec_B_i + 1) begin : vec_B_logic
             always_ff @(posedge clk) begin
                 if (!rst_n) begin
-                    vec_B[i] <= 0;
+                    vec_B[vec_B_i] <= 0;
                 end else begin
                 end
             end
@@ -87,15 +68,15 @@ module gpu_core (
     endgenerate
 
     // Logic for variable: vec_R
-    genvar i;
+    genvar vec_R_i;
     generate
-        for (i = 0; i < 256; i = i + 1) begin : vec_R_logic
+        for (vec_R_i = 0; vec_R_i < 256; vec_R_i = vec_R_i + 1) begin : vec_R_logic
             always_ff @(posedge clk) begin
                 if (!rst_n) begin
-                    vec_R[i] <= 0;
+                    vec_R[vec_R_i] <= 0;
                 end else begin
                     if ((gpu_status == 1)) begin
-                        vec_R[i] <= vector_alu(vec_A, vec_B, opcode);
+                        vec_R[vec_R_i] <= vector_alu(vec_A[vec_R_i], vec_B[vec_R_i], opcode);
                     end
                 end
             end

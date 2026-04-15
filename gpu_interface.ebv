@@ -28,9 +28,9 @@ txn mmio_write() [control == 2][true] {
 
 // AXI-Lite Write Signals (Inputs)
 trg axi_awvalid: Bool @ 0x40000018;
-trg axi_awaddr: UInt@/0..15 @ 0x4000001C;
+trg axi_awaddr: UInt@ 0x4000001C/0..15;
 trg axi_wvalid: Bool @ 0x40000020;
-trg axi_wdata: UInt@/0..15 @ 0x40000024;
+trg axi_wdata: UInt @ 0x40000024/0..15;
 trg axi_bready: Bool @ 0x40000028;
 
 // Transaction: Handle bus-initiated writes
@@ -43,7 +43,7 @@ rct txn axi_write [axi_awvalid && axi_wvalid][axi_bready] {
 
 // AXI-Lite Read Signals (Inputs)
 trg axi_arvalid: Bool @ 0x4000002C;
-trg axi_araddr: UInt@/0..15 @ 0x40000030;
+trg axi_araddr: UInt@ 0x40000030/0..15 ;
 trg axi_rready: Bool @ 0x40000034;
 
 // AXI-Lite Read Signals (Outputs)

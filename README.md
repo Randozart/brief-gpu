@@ -35,10 +35,12 @@ A 256-lane vector ALU coprocessor written in [Brief](https://github.com/Randozar
 
 ## Compilation
 
+Assuming brief-lang and brief-gpu share the same folder:
+
 ```bash
 cd ../brief-lang
 cargo build --release
-./target/release/brief-compiler verilog ../gpu/gpu_core.ebv --hw ../gpu/hardware.toml --out ../gpu
+./target/release/brief-compiler verilog ../brief-gpu/gpu_core.ebv --hw ../brief-gpu/hardware.toml --out ../gpu
 ```
 
 Output: `gpu_core.sv`, `gpu_core_tb.sv`
