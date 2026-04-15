@@ -1,6 +1,6 @@
 # GPU Core - Experimental SIMD Accelerator
 
-A 256-lane vector ALU coprocessor written in Embedded Brief.
+A 256-lane vector ALU coprocessor written in [Brief](https://github.com/Randozart/brief-lang).
 
 ## Architecture
 

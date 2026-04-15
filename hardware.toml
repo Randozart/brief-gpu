@@ -3,10 +3,24 @@ name = "gpu_core"
 clock_hz = 100_000_000
 
 [io]
-"0x40000000" = { name = "gpu_status", width = 8 }
-"0x40000004" = { name = "opcode", width = 4 }
+"0x40000000" = { pin = "A1" }
+"0x40000004" = { pin = "A2" }
+"0x40000008" = { pin = "A3" }
+"0x4000000C" = { pin = "A4" }
+"0x40000010" = { pin = "A5" }
+"0x40000014" = { pin = "A6" }
+"0x40000018" = { pin = "A7" }
+"0x4000001C" = { pin = "A8" }
+"0x40000020" = { pin = "A9" }
+"0x40000024" = { pin = "A10" }
+"0x40000028" = { pin = "A11" }
+"0x4000002C" = { pin = "A12" }
+"0x40000030" = { pin = "A13" }
+"0x40000034" = { pin = "A14" }
+"0x40000038" = { pin = "A15" }
+"0x4000003C" = { pin = "A16" }
 
 [memory]
-"0x40001000" = { name = "vec_A", size = 512, type = "ram" }
-"0x40002000" = { name = "vec_B", size = 512, type = "ram" }
-"0x40003000" = { name = "vec_R", size = 512, type = "ram" }
+"0x40001000" = { size = 256, type = "ram" }
+"0x40002000" = { size = 256, type = "ram" }
+"0x40003000" = { size = 256, type = "ram" }

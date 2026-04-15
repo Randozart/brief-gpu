@@ -1,0 +1,34 @@
+// GPU Core logic: Handles the execution of vector operations
+// Defines a 256-lane parallel compute engine with its own ALU
+
+let gpu_status: UInt @ 0x40000000 /0..7 = 0; // Control status: 1=Execute, 2=Done
+let opcode: UInt @ 0x40000004 /0..3 = 0;     // Operation to perform
+
+// Vector buffers: 256 elements of 16-bit signed integers
+let vec_A: Int[256] @ 0x40001000 / x16;
+let vec_B: Int[256] @ 0x40002000 / x16;
+let vec_R: Int[256] @ 0x40003000 / x16;
+
+// Parallel ALU: Performs the arithmetic on each lane
+defn vector_alu(a: Int, b: Int, op: UInt) -> Int [true][true] {
+    [op == 0] term a + b;   // Addition
+    [op == 1] term a - b;   // Subtraction
+    [op == 2] term a * b;   // Multiplication
+    [op == 4] term a & b;   // Bitwise AND
+    [op == 7] {             // ReLU-like activation
+        [a < 0] term 0;
+        term a;
+    };
+    [op == 8] {             // Max-like selection
+        [b == 0] term a;
+        term b;
+    };
+    term 0; 
+};
+
+// Execution Trigger: When gpu_status is set to 1, compute the entire vector
+rct txn execute [gpu_status == 1][gpu_status == 2] {
+    &vec_R = vector_alu(vec_A, vec_B, opcode); // SIMD Lifting occurs here
+    &gpu_status = 2; // Mark completion
+    term;
+};

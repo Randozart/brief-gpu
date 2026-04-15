@@ -1,0 +1,60 @@
+// GPU Interface: Manages external communication and memory-mapped IO
+// Bridges the GPU Core to a standard AXI-style bus interface
+
+import gpu_core;
+
+let read_data: UInt @ 0x40000008 /0..15 = 0;   // Data read from internal RAM
+let write_data: UInt @ 0x4000000C /0..15 = 0;  // Data to be written to RAM
+let addr: UInt @ 0x40000010 /0..15 = 0;        // Element index / Address
+let control: UInt @ 0x40000014 /0 = 0;         // MMIO Op: 1=Read, 2=Write
+
+// MMIO Read Logic: Transfers data from Vector RAM to read_data register
+txn mmio_read() [control == 1][read_data == @read_data] {
+    let idx: UInt = addr;
+    [addr >= 0x1000] { [addr < 0x2000] { &read_data = vec_A[idx]; term; }; };
+    [addr >= 0x2000] { [addr < 0x3000] { &read_data = vec_B[idx]; term; }; };
+    [addr >= 0x3000] { &read_data = vec_R[idx]; term; };
+    term;
+};
+
+// MMIO Write Logic: Updates specific vector lanes from write_data
+txn mmio_write() [control == 2][true] {
+    let idx: UInt = addr;
+    [addr >= 0x1000] { [addr < 0x2000] { &vec_A[idx] = write_data; term; }; };
+    [addr >= 0x2000] { [addr < 0x3000] { &vec_B[idx] = write_data; term; }; };
+    [addr >= 0x3000] { &vec_R[idx] = write_data; term; };
+    term;
+};
+
+// AXI-Lite Write Signals (Inputs)
+trg axi_awvalid: Bool @ 0x40000018;
+trg axi_awaddr: UInt@/0..15 @ 0x4000001C;
+trg axi_wvalid: Bool @ 0x40000020;
+trg axi_wdata: UInt@/0..15 @ 0x40000024;
+trg axi_bready: Bool @ 0x40000028;
+
+// Transaction: Handle bus-initiated writes
+rct txn axi_write [axi_awvalid && axi_wvalid][axi_bready] {
+    &addr = axi_awaddr;
+    &write_data = axi_wdata;
+    &control = 2; // Trigger mmio_write
+    term;
+};
+
+// AXI-Lite Read Signals (Inputs)
+trg axi_arvalid: Bool @ 0x4000002C;
+trg axi_araddr: UInt@/0..15 @ 0x40000030;
+trg axi_rready: Bool @ 0x40000034;
+
+// AXI-Lite Read Signals (Outputs)
+let axi_rvalid @ 0x40000038: Bool = false;
+let axi_rdata: UInt @ 0x4000003C /0..15 = 0;
+
+// Transaction: Handle bus-initiated reads
+rct txn axi_read [axi_arvalid][axi_rvalid] {
+    &addr = axi_araddr;
+    &control = 1; // Trigger mmio_read
+    &axi_rdata = read_data;
+    &axi_rvalid = true;
+    term;
+};
