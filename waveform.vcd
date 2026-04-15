@@ -1,0 +1,3539 @@
+$date
+	Wed Apr 15 16:44:40 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module gpu_interface_tb $end
+$scope module uut $end
+$var wire 16 ! axi_araddr [15:0] $end
+$var wire 1 " axi_arvalid $end
+$var wire 16 # axi_awaddr [15:0] $end
+$var wire 1 $ axi_awvalid $end
+$var wire 1 % axi_bready $end
+$var wire 1 & axi_rready $end
+$var wire 16 ' axi_wdata [15:0] $end
+$var wire 1 ( axi_wvalid $end
+$var wire 1 ) clk $end
+$var wire 1 * rst_n $end
+$var reg 16 + addr [15:0] $end
+$var reg 16 , axi_rdata [15:0] $end
+$var reg 1 - axi_rvalid $end
+$var reg 1 . control $end
+$var reg 8 / gpu_status [7:0] $end
+$var reg 4 0 opcode [3:0] $end
+$var reg 16 1 read_data [15:0] $end
+$var reg 16 2 write_data [15:0] $end
+$scope function vector_alu $end
+$upscope $end
+$scope begin vec_A_logic[0] $end
+$var parameter 2 3 vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[1] $end
+$var parameter 2 4 vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[2] $end
+$var parameter 3 5 vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[3] $end
+$var parameter 3 6 vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[4] $end
+$var parameter 4 7 vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[5] $end
+$var parameter 4 8 vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[6] $end
+$var parameter 4 9 vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[7] $end
+$var parameter 4 : vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[8] $end
+$var parameter 5 ; vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[9] $end
+$var parameter 5 < vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[10] $end
+$var parameter 5 = vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[11] $end
+$var parameter 5 > vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[12] $end
+$var parameter 5 ? vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[13] $end
+$var parameter 5 @ vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[14] $end
+$var parameter 5 A vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[15] $end
+$var parameter 5 B vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[16] $end
+$var parameter 6 C vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[17] $end
+$var parameter 6 D vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[18] $end
+$var parameter 6 E vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[19] $end
+$var parameter 6 F vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[20] $end
+$var parameter 6 G vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[21] $end
+$var parameter 6 H vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[22] $end
+$var parameter 6 I vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[23] $end
+$var parameter 6 J vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[24] $end
+$var parameter 6 K vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[25] $end
+$var parameter 6 L vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[26] $end
+$var parameter 6 M vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[27] $end
+$var parameter 6 N vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[28] $end
+$var parameter 6 O vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[29] $end
+$var parameter 6 P vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[30] $end
+$var parameter 6 Q vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[31] $end
+$var parameter 6 R vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[32] $end
+$var parameter 7 S vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[33] $end
+$var parameter 7 T vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[34] $end
+$var parameter 7 U vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[35] $end
+$var parameter 7 V vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[36] $end
+$var parameter 7 W vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[37] $end
+$var parameter 7 X vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[38] $end
+$var parameter 7 Y vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[39] $end
+$var parameter 7 Z vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[40] $end
+$var parameter 7 [ vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[41] $end
+$var parameter 7 \ vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[42] $end
+$var parameter 7 ] vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[43] $end
+$var parameter 7 ^ vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[44] $end
+$var parameter 7 _ vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[45] $end
+$var parameter 7 ` vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[46] $end
+$var parameter 7 a vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[47] $end
+$var parameter 7 b vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[48] $end
+$var parameter 7 c vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[49] $end
+$var parameter 7 d vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[50] $end
+$var parameter 7 e vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[51] $end
+$var parameter 7 f vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[52] $end
+$var parameter 7 g vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[53] $end
+$var parameter 7 h vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[54] $end
+$var parameter 7 i vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[55] $end
+$var parameter 7 j vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[56] $end
+$var parameter 7 k vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[57] $end
+$var parameter 7 l vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[58] $end
+$var parameter 7 m vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[59] $end
+$var parameter 7 n vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[60] $end
+$var parameter 7 o vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[61] $end
+$var parameter 7 p vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[62] $end
+$var parameter 7 q vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[63] $end
+$var parameter 7 r vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[64] $end
+$var parameter 8 s vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[65] $end
+$var parameter 8 t vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[66] $end
+$var parameter 8 u vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[67] $end
+$var parameter 8 v vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[68] $end
+$var parameter 8 w vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[69] $end
+$var parameter 8 x vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[70] $end
+$var parameter 8 y vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[71] $end
+$var parameter 8 z vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[72] $end
+$var parameter 8 { vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[73] $end
+$var parameter 8 | vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[74] $end
+$var parameter 8 } vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[75] $end
+$var parameter 8 ~ vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[76] $end
+$var parameter 8 !" vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[77] $end
+$var parameter 8 "" vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[78] $end
+$var parameter 8 #" vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[79] $end
+$var parameter 8 $" vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[80] $end
+$var parameter 8 %" vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[81] $end
+$var parameter 8 &" vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[82] $end
+$var parameter 8 '" vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[83] $end
+$var parameter 8 (" vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[84] $end
+$var parameter 8 )" vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[85] $end
+$var parameter 8 *" vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[86] $end
+$var parameter 8 +" vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[87] $end
+$var parameter 8 ," vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[88] $end
+$var parameter 8 -" vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[89] $end
+$var parameter 8 ." vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[90] $end
+$var parameter 8 /" vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[91] $end
+$var parameter 8 0" vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[92] $end
+$var parameter 8 1" vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[93] $end
+$var parameter 8 2" vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[94] $end
+$var parameter 8 3" vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[95] $end
+$var parameter 8 4" vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[96] $end
+$var parameter 8 5" vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[97] $end
+$var parameter 8 6" vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[98] $end
+$var parameter 8 7" vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[99] $end
+$var parameter 8 8" vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[100] $end
+$var parameter 8 9" vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[101] $end
+$var parameter 8 :" vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[102] $end
+$var parameter 8 ;" vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[103] $end
+$var parameter 8 <" vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[104] $end
+$var parameter 8 =" vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[105] $end
+$var parameter 8 >" vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[106] $end
+$var parameter 8 ?" vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[107] $end
+$var parameter 8 @" vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[108] $end
+$var parameter 8 A" vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[109] $end
+$var parameter 8 B" vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[110] $end
+$var parameter 8 C" vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[111] $end
+$var parameter 8 D" vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[112] $end
+$var parameter 8 E" vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[113] $end
+$var parameter 8 F" vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[114] $end
+$var parameter 8 G" vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[115] $end
+$var parameter 8 H" vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[116] $end
+$var parameter 8 I" vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[117] $end
+$var parameter 8 J" vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[118] $end
+$var parameter 8 K" vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[119] $end
+$var parameter 8 L" vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[120] $end
+$var parameter 8 M" vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[121] $end
+$var parameter 8 N" vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[122] $end
+$var parameter 8 O" vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[123] $end
+$var parameter 8 P" vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[124] $end
+$var parameter 8 Q" vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[125] $end
+$var parameter 8 R" vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[126] $end
+$var parameter 8 S" vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[127] $end
+$var parameter 8 T" vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[128] $end
+$var parameter 9 U" vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[129] $end
+$var parameter 9 V" vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[130] $end
+$var parameter 9 W" vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[131] $end
+$var parameter 9 X" vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[132] $end
+$var parameter 9 Y" vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[133] $end
+$var parameter 9 Z" vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[134] $end
+$var parameter 9 [" vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[135] $end
+$var parameter 9 \" vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[136] $end
+$var parameter 9 ]" vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[137] $end
+$var parameter 9 ^" vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[138] $end
+$var parameter 9 _" vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[139] $end
+$var parameter 9 `" vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[140] $end
+$var parameter 9 a" vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[141] $end
+$var parameter 9 b" vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[142] $end
+$var parameter 9 c" vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[143] $end
+$var parameter 9 d" vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[144] $end
+$var parameter 9 e" vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[145] $end
+$var parameter 9 f" vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[146] $end
+$var parameter 9 g" vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[147] $end
+$var parameter 9 h" vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[148] $end
+$var parameter 9 i" vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[149] $end
+$var parameter 9 j" vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[150] $end
+$var parameter 9 k" vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[151] $end
+$var parameter 9 l" vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[152] $end
+$var parameter 9 m" vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[153] $end
+$var parameter 9 n" vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[154] $end
+$var parameter 9 o" vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[155] $end
+$var parameter 9 p" vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[156] $end
+$var parameter 9 q" vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[157] $end
+$var parameter 9 r" vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[158] $end
+$var parameter 9 s" vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[159] $end
+$var parameter 9 t" vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[160] $end
+$var parameter 9 u" vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[161] $end
+$var parameter 9 v" vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[162] $end
+$var parameter 9 w" vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[163] $end
+$var parameter 9 x" vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[164] $end
+$var parameter 9 y" vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[165] $end
+$var parameter 9 z" vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[166] $end
+$var parameter 9 {" vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[167] $end
+$var parameter 9 |" vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[168] $end
+$var parameter 9 }" vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[169] $end
+$var parameter 9 ~" vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[170] $end
+$var parameter 9 !# vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[171] $end
+$var parameter 9 "# vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[172] $end
+$var parameter 9 ## vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[173] $end
+$var parameter 9 $# vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[174] $end
+$var parameter 9 %# vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[175] $end
+$var parameter 9 &# vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[176] $end
+$var parameter 9 '# vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[177] $end
+$var parameter 9 (# vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[178] $end
+$var parameter 9 )# vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[179] $end
+$var parameter 9 *# vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[180] $end
+$var parameter 9 +# vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[181] $end
+$var parameter 9 ,# vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[182] $end
+$var parameter 9 -# vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[183] $end
+$var parameter 9 .# vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[184] $end
+$var parameter 9 /# vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[185] $end
+$var parameter 9 0# vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[186] $end
+$var parameter 9 1# vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[187] $end
+$var parameter 9 2# vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[188] $end
+$var parameter 9 3# vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[189] $end
+$var parameter 9 4# vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[190] $end
+$var parameter 9 5# vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[191] $end
+$var parameter 9 6# vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[192] $end
+$var parameter 9 7# vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[193] $end
+$var parameter 9 8# vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[194] $end
+$var parameter 9 9# vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[195] $end
+$var parameter 9 :# vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[196] $end
+$var parameter 9 ;# vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[197] $end
+$var parameter 9 <# vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[198] $end
+$var parameter 9 =# vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[199] $end
+$var parameter 9 ># vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[200] $end
+$var parameter 9 ?# vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[201] $end
+$var parameter 9 @# vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[202] $end
+$var parameter 9 A# vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[203] $end
+$var parameter 9 B# vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[204] $end
+$var parameter 9 C# vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[205] $end
+$var parameter 9 D# vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[206] $end
+$var parameter 9 E# vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[207] $end
+$var parameter 9 F# vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[208] $end
+$var parameter 9 G# vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[209] $end
+$var parameter 9 H# vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[210] $end
+$var parameter 9 I# vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[211] $end
+$var parameter 9 J# vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[212] $end
+$var parameter 9 K# vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[213] $end
+$var parameter 9 L# vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[214] $end
+$var parameter 9 M# vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[215] $end
+$var parameter 9 N# vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[216] $end
+$var parameter 9 O# vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[217] $end
+$var parameter 9 P# vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[218] $end
+$var parameter 9 Q# vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[219] $end
+$var parameter 9 R# vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[220] $end
+$var parameter 9 S# vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[221] $end
+$var parameter 9 T# vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[222] $end
+$var parameter 9 U# vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[223] $end
+$var parameter 9 V# vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[224] $end
+$var parameter 9 W# vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[225] $end
+$var parameter 9 X# vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[226] $end
+$var parameter 9 Y# vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[227] $end
+$var parameter 9 Z# vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[228] $end
+$var parameter 9 [# vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[229] $end
+$var parameter 9 \# vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[230] $end
+$var parameter 9 ]# vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[231] $end
+$var parameter 9 ^# vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[232] $end
+$var parameter 9 _# vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[233] $end
+$var parameter 9 `# vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[234] $end
+$var parameter 9 a# vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[235] $end
+$var parameter 9 b# vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[236] $end
+$var parameter 9 c# vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[237] $end
+$var parameter 9 d# vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[238] $end
+$var parameter 9 e# vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[239] $end
+$var parameter 9 f# vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[240] $end
+$var parameter 9 g# vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[241] $end
+$var parameter 9 h# vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[242] $end
+$var parameter 9 i# vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[243] $end
+$var parameter 9 j# vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[244] $end
+$var parameter 9 k# vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[245] $end
+$var parameter 9 l# vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[246] $end
+$var parameter 9 m# vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[247] $end
+$var parameter 9 n# vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[248] $end
+$var parameter 9 o# vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[249] $end
+$var parameter 9 p# vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[250] $end
+$var parameter 9 q# vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[251] $end
+$var parameter 9 r# vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[252] $end
+$var parameter 9 s# vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[253] $end
+$var parameter 9 t# vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[254] $end
+$var parameter 9 u# vec_A_i $end
+$upscope $end
+$scope begin vec_A_logic[255] $end
+$var parameter 9 v# vec_A_i $end
+$upscope $end
+$scope begin vec_B_logic[0] $end
+$var parameter 2 w# vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[1] $end
+$var parameter 2 x# vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[2] $end
+$var parameter 3 y# vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[3] $end
+$var parameter 3 z# vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[4] $end
+$var parameter 4 {# vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[5] $end
+$var parameter 4 |# vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[6] $end
+$var parameter 4 }# vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[7] $end
+$var parameter 4 ~# vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[8] $end
+$var parameter 5 !$ vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[9] $end
+$var parameter 5 "$ vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[10] $end
+$var parameter 5 #$ vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[11] $end
+$var parameter 5 $$ vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[12] $end
+$var parameter 5 %$ vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[13] $end
+$var parameter 5 &$ vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[14] $end
+$var parameter 5 '$ vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[15] $end
+$var parameter 5 ($ vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[16] $end
+$var parameter 6 )$ vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[17] $end
+$var parameter 6 *$ vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[18] $end
+$var parameter 6 +$ vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[19] $end
+$var parameter 6 ,$ vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[20] $end
+$var parameter 6 -$ vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[21] $end
+$var parameter 6 .$ vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[22] $end
+$var parameter 6 /$ vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[23] $end
+$var parameter 6 0$ vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[24] $end
+$var parameter 6 1$ vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[25] $end
+$var parameter 6 2$ vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[26] $end
+$var parameter 6 3$ vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[27] $end
+$var parameter 6 4$ vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[28] $end
+$var parameter 6 5$ vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[29] $end
+$var parameter 6 6$ vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[30] $end
+$var parameter 6 7$ vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[31] $end
+$var parameter 6 8$ vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[32] $end
+$var parameter 7 9$ vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[33] $end
+$var parameter 7 :$ vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[34] $end
+$var parameter 7 ;$ vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[35] $end
+$var parameter 7 <$ vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[36] $end
+$var parameter 7 =$ vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[37] $end
+$var parameter 7 >$ vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[38] $end
+$var parameter 7 ?$ vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[39] $end
+$var parameter 7 @$ vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[40] $end
+$var parameter 7 A$ vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[41] $end
+$var parameter 7 B$ vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[42] $end
+$var parameter 7 C$ vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[43] $end
+$var parameter 7 D$ vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[44] $end
+$var parameter 7 E$ vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[45] $end
+$var parameter 7 F$ vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[46] $end
+$var parameter 7 G$ vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[47] $end
+$var parameter 7 H$ vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[48] $end
+$var parameter 7 I$ vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[49] $end
+$var parameter 7 J$ vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[50] $end
+$var parameter 7 K$ vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[51] $end
+$var parameter 7 L$ vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[52] $end
+$var parameter 7 M$ vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[53] $end
+$var parameter 7 N$ vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[54] $end
+$var parameter 7 O$ vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[55] $end
+$var parameter 7 P$ vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[56] $end
+$var parameter 7 Q$ vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[57] $end
+$var parameter 7 R$ vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[58] $end
+$var parameter 7 S$ vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[59] $end
+$var parameter 7 T$ vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[60] $end
+$var parameter 7 U$ vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[61] $end
+$var parameter 7 V$ vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[62] $end
+$var parameter 7 W$ vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[63] $end
+$var parameter 7 X$ vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[64] $end
+$var parameter 8 Y$ vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[65] $end
+$var parameter 8 Z$ vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[66] $end
+$var parameter 8 [$ vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[67] $end
+$var parameter 8 \$ vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[68] $end
+$var parameter 8 ]$ vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[69] $end
+$var parameter 8 ^$ vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[70] $end
+$var parameter 8 _$ vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[71] $end
+$var parameter 8 `$ vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[72] $end
+$var parameter 8 a$ vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[73] $end
+$var parameter 8 b$ vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[74] $end
+$var parameter 8 c$ vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[75] $end
+$var parameter 8 d$ vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[76] $end
+$var parameter 8 e$ vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[77] $end
+$var parameter 8 f$ vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[78] $end
+$var parameter 8 g$ vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[79] $end
+$var parameter 8 h$ vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[80] $end
+$var parameter 8 i$ vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[81] $end
+$var parameter 8 j$ vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[82] $end
+$var parameter 8 k$ vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[83] $end
+$var parameter 8 l$ vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[84] $end
+$var parameter 8 m$ vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[85] $end
+$var parameter 8 n$ vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[86] $end
+$var parameter 8 o$ vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[87] $end
+$var parameter 8 p$ vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[88] $end
+$var parameter 8 q$ vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[89] $end
+$var parameter 8 r$ vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[90] $end
+$var parameter 8 s$ vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[91] $end
+$var parameter 8 t$ vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[92] $end
+$var parameter 8 u$ vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[93] $end
+$var parameter 8 v$ vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[94] $end
+$var parameter 8 w$ vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[95] $end
+$var parameter 8 x$ vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[96] $end
+$var parameter 8 y$ vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[97] $end
+$var parameter 8 z$ vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[98] $end
+$var parameter 8 {$ vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[99] $end
+$var parameter 8 |$ vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[100] $end
+$var parameter 8 }$ vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[101] $end
+$var parameter 8 ~$ vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[102] $end
+$var parameter 8 !% vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[103] $end
+$var parameter 8 "% vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[104] $end
+$var parameter 8 #% vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[105] $end
+$var parameter 8 $% vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[106] $end
+$var parameter 8 %% vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[107] $end
+$var parameter 8 &% vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[108] $end
+$var parameter 8 '% vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[109] $end
+$var parameter 8 (% vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[110] $end
+$var parameter 8 )% vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[111] $end
+$var parameter 8 *% vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[112] $end
+$var parameter 8 +% vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[113] $end
+$var parameter 8 ,% vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[114] $end
+$var parameter 8 -% vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[115] $end
+$var parameter 8 .% vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[116] $end
+$var parameter 8 /% vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[117] $end
+$var parameter 8 0% vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[118] $end
+$var parameter 8 1% vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[119] $end
+$var parameter 8 2% vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[120] $end
+$var parameter 8 3% vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[121] $end
+$var parameter 8 4% vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[122] $end
+$var parameter 8 5% vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[123] $end
+$var parameter 8 6% vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[124] $end
+$var parameter 8 7% vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[125] $end
+$var parameter 8 8% vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[126] $end
+$var parameter 8 9% vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[127] $end
+$var parameter 8 :% vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[128] $end
+$var parameter 9 ;% vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[129] $end
+$var parameter 9 <% vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[130] $end
+$var parameter 9 =% vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[131] $end
+$var parameter 9 >% vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[132] $end
+$var parameter 9 ?% vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[133] $end
+$var parameter 9 @% vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[134] $end
+$var parameter 9 A% vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[135] $end
+$var parameter 9 B% vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[136] $end
+$var parameter 9 C% vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[137] $end
+$var parameter 9 D% vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[138] $end
+$var parameter 9 E% vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[139] $end
+$var parameter 9 F% vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[140] $end
+$var parameter 9 G% vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[141] $end
+$var parameter 9 H% vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[142] $end
+$var parameter 9 I% vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[143] $end
+$var parameter 9 J% vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[144] $end
+$var parameter 9 K% vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[145] $end
+$var parameter 9 L% vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[146] $end
+$var parameter 9 M% vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[147] $end
+$var parameter 9 N% vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[148] $end
+$var parameter 9 O% vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[149] $end
+$var parameter 9 P% vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[150] $end
+$var parameter 9 Q% vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[151] $end
+$var parameter 9 R% vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[152] $end
+$var parameter 9 S% vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[153] $end
+$var parameter 9 T% vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[154] $end
+$var parameter 9 U% vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[155] $end
+$var parameter 9 V% vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[156] $end
+$var parameter 9 W% vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[157] $end
+$var parameter 9 X% vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[158] $end
+$var parameter 9 Y% vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[159] $end
+$var parameter 9 Z% vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[160] $end
+$var parameter 9 [% vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[161] $end
+$var parameter 9 \% vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[162] $end
+$var parameter 9 ]% vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[163] $end
+$var parameter 9 ^% vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[164] $end
+$var parameter 9 _% vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[165] $end
+$var parameter 9 `% vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[166] $end
+$var parameter 9 a% vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[167] $end
+$var parameter 9 b% vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[168] $end
+$var parameter 9 c% vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[169] $end
+$var parameter 9 d% vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[170] $end
+$var parameter 9 e% vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[171] $end
+$var parameter 9 f% vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[172] $end
+$var parameter 9 g% vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[173] $end
+$var parameter 9 h% vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[174] $end
+$var parameter 9 i% vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[175] $end
+$var parameter 9 j% vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[176] $end
+$var parameter 9 k% vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[177] $end
+$var parameter 9 l% vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[178] $end
+$var parameter 9 m% vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[179] $end
+$var parameter 9 n% vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[180] $end
+$var parameter 9 o% vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[181] $end
+$var parameter 9 p% vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[182] $end
+$var parameter 9 q% vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[183] $end
+$var parameter 9 r% vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[184] $end
+$var parameter 9 s% vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[185] $end
+$var parameter 9 t% vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[186] $end
+$var parameter 9 u% vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[187] $end
+$var parameter 9 v% vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[188] $end
+$var parameter 9 w% vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[189] $end
+$var parameter 9 x% vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[190] $end
+$var parameter 9 y% vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[191] $end
+$var parameter 9 z% vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[192] $end
+$var parameter 9 {% vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[193] $end
+$var parameter 9 |% vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[194] $end
+$var parameter 9 }% vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[195] $end
+$var parameter 9 ~% vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[196] $end
+$var parameter 9 !& vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[197] $end
+$var parameter 9 "& vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[198] $end
+$var parameter 9 #& vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[199] $end
+$var parameter 9 $& vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[200] $end
+$var parameter 9 %& vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[201] $end
+$var parameter 9 && vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[202] $end
+$var parameter 9 '& vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[203] $end
+$var parameter 9 (& vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[204] $end
+$var parameter 9 )& vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[205] $end
+$var parameter 9 *& vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[206] $end
+$var parameter 9 +& vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[207] $end
+$var parameter 9 ,& vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[208] $end
+$var parameter 9 -& vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[209] $end
+$var parameter 9 .& vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[210] $end
+$var parameter 9 /& vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[211] $end
+$var parameter 9 0& vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[212] $end
+$var parameter 9 1& vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[213] $end
+$var parameter 9 2& vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[214] $end
+$var parameter 9 3& vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[215] $end
+$var parameter 9 4& vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[216] $end
+$var parameter 9 5& vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[217] $end
+$var parameter 9 6& vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[218] $end
+$var parameter 9 7& vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[219] $end
+$var parameter 9 8& vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[220] $end
+$var parameter 9 9& vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[221] $end
+$var parameter 9 :& vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[222] $end
+$var parameter 9 ;& vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[223] $end
+$var parameter 9 <& vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[224] $end
+$var parameter 9 =& vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[225] $end
+$var parameter 9 >& vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[226] $end
+$var parameter 9 ?& vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[227] $end
+$var parameter 9 @& vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[228] $end
+$var parameter 9 A& vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[229] $end
+$var parameter 9 B& vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[230] $end
+$var parameter 9 C& vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[231] $end
+$var parameter 9 D& vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[232] $end
+$var parameter 9 E& vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[233] $end
+$var parameter 9 F& vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[234] $end
+$var parameter 9 G& vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[235] $end
+$var parameter 9 H& vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[236] $end
+$var parameter 9 I& vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[237] $end
+$var parameter 9 J& vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[238] $end
+$var parameter 9 K& vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[239] $end
+$var parameter 9 L& vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[240] $end
+$var parameter 9 M& vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[241] $end
+$var parameter 9 N& vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[242] $end
+$var parameter 9 O& vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[243] $end
+$var parameter 9 P& vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[244] $end
+$var parameter 9 Q& vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[245] $end
+$var parameter 9 R& vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[246] $end
+$var parameter 9 S& vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[247] $end
+$var parameter 9 T& vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[248] $end
+$var parameter 9 U& vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[249] $end
+$var parameter 9 V& vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[250] $end
+$var parameter 9 W& vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[251] $end
+$var parameter 9 X& vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[252] $end
+$var parameter 9 Y& vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[253] $end
+$var parameter 9 Z& vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[254] $end
+$var parameter 9 [& vec_B_i $end
+$upscope $end
+$scope begin vec_B_logic[255] $end
+$var parameter 9 \& vec_B_i $end
+$upscope $end
+$scope begin vec_R_logic[0] $end
+$var parameter 2 ]& vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[1] $end
+$var parameter 2 ^& vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[2] $end
+$var parameter 3 _& vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[3] $end
+$var parameter 3 `& vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[4] $end
+$var parameter 4 a& vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[5] $end
+$var parameter 4 b& vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[6] $end
+$var parameter 4 c& vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[7] $end
+$var parameter 4 d& vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[8] $end
+$var parameter 5 e& vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[9] $end
+$var parameter 5 f& vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[10] $end
+$var parameter 5 g& vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[11] $end
+$var parameter 5 h& vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[12] $end
+$var parameter 5 i& vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[13] $end
+$var parameter 5 j& vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[14] $end
+$var parameter 5 k& vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[15] $end
+$var parameter 5 l& vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[16] $end
+$var parameter 6 m& vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[17] $end
+$var parameter 6 n& vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[18] $end
+$var parameter 6 o& vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[19] $end
+$var parameter 6 p& vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[20] $end
+$var parameter 6 q& vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[21] $end
+$var parameter 6 r& vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[22] $end
+$var parameter 6 s& vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[23] $end
+$var parameter 6 t& vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[24] $end
+$var parameter 6 u& vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[25] $end
+$var parameter 6 v& vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[26] $end
+$var parameter 6 w& vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[27] $end
+$var parameter 6 x& vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[28] $end
+$var parameter 6 y& vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[29] $end
+$var parameter 6 z& vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[30] $end
+$var parameter 6 {& vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[31] $end
+$var parameter 6 |& vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[32] $end
+$var parameter 7 }& vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[33] $end
+$var parameter 7 ~& vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[34] $end
+$var parameter 7 !' vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[35] $end
+$var parameter 7 "' vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[36] $end
+$var parameter 7 #' vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[37] $end
+$var parameter 7 $' vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[38] $end
+$var parameter 7 %' vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[39] $end
+$var parameter 7 &' vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[40] $end
+$var parameter 7 '' vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[41] $end
+$var parameter 7 (' vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[42] $end
+$var parameter 7 )' vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[43] $end
+$var parameter 7 *' vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[44] $end
+$var parameter 7 +' vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[45] $end
+$var parameter 7 ,' vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[46] $end
+$var parameter 7 -' vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[47] $end
+$var parameter 7 .' vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[48] $end
+$var parameter 7 /' vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[49] $end
+$var parameter 7 0' vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[50] $end
+$var parameter 7 1' vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[51] $end
+$var parameter 7 2' vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[52] $end
+$var parameter 7 3' vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[53] $end
+$var parameter 7 4' vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[54] $end
+$var parameter 7 5' vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[55] $end
+$var parameter 7 6' vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[56] $end
+$var parameter 7 7' vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[57] $end
+$var parameter 7 8' vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[58] $end
+$var parameter 7 9' vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[59] $end
+$var parameter 7 :' vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[60] $end
+$var parameter 7 ;' vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[61] $end
+$var parameter 7 <' vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[62] $end
+$var parameter 7 =' vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[63] $end
+$var parameter 7 >' vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[64] $end
+$var parameter 8 ?' vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[65] $end
+$var parameter 8 @' vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[66] $end
+$var parameter 8 A' vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[67] $end
+$var parameter 8 B' vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[68] $end
+$var parameter 8 C' vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[69] $end
+$var parameter 8 D' vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[70] $end
+$var parameter 8 E' vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[71] $end
+$var parameter 8 F' vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[72] $end
+$var parameter 8 G' vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[73] $end
+$var parameter 8 H' vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[74] $end
+$var parameter 8 I' vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[75] $end
+$var parameter 8 J' vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[76] $end
+$var parameter 8 K' vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[77] $end
+$var parameter 8 L' vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[78] $end
+$var parameter 8 M' vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[79] $end
+$var parameter 8 N' vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[80] $end
+$var parameter 8 O' vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[81] $end
+$var parameter 8 P' vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[82] $end
+$var parameter 8 Q' vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[83] $end
+$var parameter 8 R' vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[84] $end
+$var parameter 8 S' vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[85] $end
+$var parameter 8 T' vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[86] $end
+$var parameter 8 U' vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[87] $end
+$var parameter 8 V' vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[88] $end
+$var parameter 8 W' vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[89] $end
+$var parameter 8 X' vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[90] $end
+$var parameter 8 Y' vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[91] $end
+$var parameter 8 Z' vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[92] $end
+$var parameter 8 [' vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[93] $end
+$var parameter 8 \' vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[94] $end
+$var parameter 8 ]' vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[95] $end
+$var parameter 8 ^' vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[96] $end
+$var parameter 8 _' vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[97] $end
+$var parameter 8 `' vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[98] $end
+$var parameter 8 a' vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[99] $end
+$var parameter 8 b' vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[100] $end
+$var parameter 8 c' vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[101] $end
+$var parameter 8 d' vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[102] $end
+$var parameter 8 e' vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[103] $end
+$var parameter 8 f' vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[104] $end
+$var parameter 8 g' vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[105] $end
+$var parameter 8 h' vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[106] $end
+$var parameter 8 i' vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[107] $end
+$var parameter 8 j' vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[108] $end
+$var parameter 8 k' vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[109] $end
+$var parameter 8 l' vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[110] $end
+$var parameter 8 m' vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[111] $end
+$var parameter 8 n' vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[112] $end
+$var parameter 8 o' vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[113] $end
+$var parameter 8 p' vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[114] $end
+$var parameter 8 q' vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[115] $end
+$var parameter 8 r' vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[116] $end
+$var parameter 8 s' vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[117] $end
+$var parameter 8 t' vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[118] $end
+$var parameter 8 u' vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[119] $end
+$var parameter 8 v' vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[120] $end
+$var parameter 8 w' vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[121] $end
+$var parameter 8 x' vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[122] $end
+$var parameter 8 y' vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[123] $end
+$var parameter 8 z' vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[124] $end
+$var parameter 8 {' vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[125] $end
+$var parameter 8 |' vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[126] $end
+$var parameter 8 }' vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[127] $end
+$var parameter 8 ~' vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[128] $end
+$var parameter 9 !( vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[129] $end
+$var parameter 9 "( vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[130] $end
+$var parameter 9 #( vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[131] $end
+$var parameter 9 $( vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[132] $end
+$var parameter 9 %( vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[133] $end
+$var parameter 9 &( vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[134] $end
+$var parameter 9 '( vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[135] $end
+$var parameter 9 (( vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[136] $end
+$var parameter 9 )( vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[137] $end
+$var parameter 9 *( vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[138] $end
+$var parameter 9 +( vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[139] $end
+$var parameter 9 ,( vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[140] $end
+$var parameter 9 -( vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[141] $end
+$var parameter 9 .( vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[142] $end
+$var parameter 9 /( vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[143] $end
+$var parameter 9 0( vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[144] $end
+$var parameter 9 1( vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[145] $end
+$var parameter 9 2( vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[146] $end
+$var parameter 9 3( vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[147] $end
+$var parameter 9 4( vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[148] $end
+$var parameter 9 5( vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[149] $end
+$var parameter 9 6( vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[150] $end
+$var parameter 9 7( vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[151] $end
+$var parameter 9 8( vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[152] $end
+$var parameter 9 9( vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[153] $end
+$var parameter 9 :( vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[154] $end
+$var parameter 9 ;( vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[155] $end
+$var parameter 9 <( vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[156] $end
+$var parameter 9 =( vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[157] $end
+$var parameter 9 >( vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[158] $end
+$var parameter 9 ?( vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[159] $end
+$var parameter 9 @( vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[160] $end
+$var parameter 9 A( vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[161] $end
+$var parameter 9 B( vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[162] $end
+$var parameter 9 C( vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[163] $end
+$var parameter 9 D( vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[164] $end
+$var parameter 9 E( vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[165] $end
+$var parameter 9 F( vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[166] $end
+$var parameter 9 G( vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[167] $end
+$var parameter 9 H( vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[168] $end
+$var parameter 9 I( vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[169] $end
+$var parameter 9 J( vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[170] $end
+$var parameter 9 K( vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[171] $end
+$var parameter 9 L( vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[172] $end
+$var parameter 9 M( vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[173] $end
+$var parameter 9 N( vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[174] $end
+$var parameter 9 O( vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[175] $end
+$var parameter 9 P( vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[176] $end
+$var parameter 9 Q( vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[177] $end
+$var parameter 9 R( vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[178] $end
+$var parameter 9 S( vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[179] $end
+$var parameter 9 T( vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[180] $end
+$var parameter 9 U( vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[181] $end
+$var parameter 9 V( vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[182] $end
+$var parameter 9 W( vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[183] $end
+$var parameter 9 X( vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[184] $end
+$var parameter 9 Y( vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[185] $end
+$var parameter 9 Z( vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[186] $end
+$var parameter 9 [( vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[187] $end
+$var parameter 9 \( vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[188] $end
+$var parameter 9 ]( vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[189] $end
+$var parameter 9 ^( vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[190] $end
+$var parameter 9 _( vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[191] $end
+$var parameter 9 `( vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[192] $end
+$var parameter 9 a( vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[193] $end
+$var parameter 9 b( vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[194] $end
+$var parameter 9 c( vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[195] $end
+$var parameter 9 d( vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[196] $end
+$var parameter 9 e( vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[197] $end
+$var parameter 9 f( vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[198] $end
+$var parameter 9 g( vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[199] $end
+$var parameter 9 h( vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[200] $end
+$var parameter 9 i( vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[201] $end
+$var parameter 9 j( vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[202] $end
+$var parameter 9 k( vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[203] $end
+$var parameter 9 l( vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[204] $end
+$var parameter 9 m( vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[205] $end
+$var parameter 9 n( vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[206] $end
+$var parameter 9 o( vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[207] $end
+$var parameter 9 p( vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[208] $end
+$var parameter 9 q( vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[209] $end
+$var parameter 9 r( vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[210] $end
+$var parameter 9 s( vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[211] $end
+$var parameter 9 t( vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[212] $end
+$var parameter 9 u( vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[213] $end
+$var parameter 9 v( vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[214] $end
+$var parameter 9 w( vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[215] $end
+$var parameter 9 x( vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[216] $end
+$var parameter 9 y( vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[217] $end
+$var parameter 9 z( vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[218] $end
+$var parameter 9 {( vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[219] $end
+$var parameter 9 |( vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[220] $end
+$var parameter 9 }( vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[221] $end
+$var parameter 9 ~( vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[222] $end
+$var parameter 9 !) vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[223] $end
+$var parameter 9 ") vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[224] $end
+$var parameter 9 #) vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[225] $end
+$var parameter 9 $) vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[226] $end
+$var parameter 9 %) vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[227] $end
+$var parameter 9 &) vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[228] $end
+$var parameter 9 ') vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[229] $end
+$var parameter 9 () vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[230] $end
+$var parameter 9 )) vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[231] $end
+$var parameter 9 *) vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[232] $end
+$var parameter 9 +) vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[233] $end
+$var parameter 9 ,) vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[234] $end
+$var parameter 9 -) vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[235] $end
+$var parameter 9 .) vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[236] $end
+$var parameter 9 /) vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[237] $end
+$var parameter 9 0) vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[238] $end
+$var parameter 9 1) vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[239] $end
+$var parameter 9 2) vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[240] $end
+$var parameter 9 3) vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[241] $end
+$var parameter 9 4) vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[242] $end
+$var parameter 9 5) vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[243] $end
+$var parameter 9 6) vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[244] $end
+$var parameter 9 7) vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[245] $end
+$var parameter 9 8) vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[246] $end
+$var parameter 9 9) vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[247] $end
+$var parameter 9 :) vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[248] $end
+$var parameter 9 ;) vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[249] $end
+$var parameter 9 <) vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[250] $end
+$var parameter 9 =) vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[251] $end
+$var parameter 9 >) vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[252] $end
+$var parameter 9 ?) vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[253] $end
+$var parameter 9 @) vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[254] $end
+$var parameter 9 A) vec_R_i $end
+$upscope $end
+$scope begin vec_R_logic[255] $end
+$var parameter 9 B) vec_R_i $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b11111111 B)
+b11111110 A)
+b11111101 @)
+b11111100 ?)
+b11111011 >)
+b11111010 =)
+b11111001 <)
+b11111000 ;)
+b11110111 :)
+b11110110 9)
+b11110101 8)
+b11110100 7)
+b11110011 6)
+b11110010 5)
+b11110001 4)
+b11110000 3)
+b11101111 2)
+b11101110 1)
+b11101101 0)
+b11101100 /)
+b11101011 .)
+b11101010 -)
+b11101001 ,)
+b11101000 +)
+b11100111 *)
+b11100110 ))
+b11100101 ()
+b11100100 ')
+b11100011 &)
+b11100010 %)
+b11100001 $)
+b11100000 #)
+b11011111 ")
+b11011110 !)
+b11011101 ~(
+b11011100 }(
+b11011011 |(
+b11011010 {(
+b11011001 z(
+b11011000 y(
+b11010111 x(
+b11010110 w(
+b11010101 v(
+b11010100 u(
+b11010011 t(
+b11010010 s(
+b11010001 r(
+b11010000 q(
+b11001111 p(
+b11001110 o(
+b11001101 n(
+b11001100 m(
+b11001011 l(
+b11001010 k(
+b11001001 j(
+b11001000 i(
+b11000111 h(
+b11000110 g(
+b11000101 f(
+b11000100 e(
+b11000011 d(
+b11000010 c(
+b11000001 b(
+b11000000 a(
+b10111111 `(
+b10111110 _(
+b10111101 ^(
+b10111100 ](
+b10111011 \(
+b10111010 [(
+b10111001 Z(
+b10111000 Y(
+b10110111 X(
+b10110110 W(
+b10110101 V(
+b10110100 U(
+b10110011 T(
+b10110010 S(
+b10110001 R(
+b10110000 Q(
+b10101111 P(
+b10101110 O(
+b10101101 N(
+b10101100 M(
+b10101011 L(
+b10101010 K(
+b10101001 J(
+b10101000 I(
+b10100111 H(
+b10100110 G(
+b10100101 F(
+b10100100 E(
+b10100011 D(
+b10100010 C(
+b10100001 B(
+b10100000 A(
+b10011111 @(
+b10011110 ?(
+b10011101 >(
+b10011100 =(
+b10011011 <(
+b10011010 ;(
+b10011001 :(
+b10011000 9(
+b10010111 8(
+b10010110 7(
+b10010101 6(
+b10010100 5(
+b10010011 4(
+b10010010 3(
+b10010001 2(
+b10010000 1(
+b10001111 0(
+b10001110 /(
+b10001101 .(
+b10001100 -(
+b10001011 ,(
+b10001010 +(
+b10001001 *(
+b10001000 )(
+b10000111 ((
+b10000110 '(
+b10000101 &(
+b10000100 %(
+b10000011 $(
+b10000010 #(
+b10000001 "(
+b10000000 !(
+b1111111 ~'
+b1111110 }'
+b1111101 |'
+b1111100 {'
+b1111011 z'
+b1111010 y'
+b1111001 x'
+b1111000 w'
+b1110111 v'
+b1110110 u'
+b1110101 t'
+b1110100 s'
+b1110011 r'
+b1110010 q'
+b1110001 p'
+b1110000 o'
+b1101111 n'
+b1101110 m'
+b1101101 l'
+b1101100 k'
+b1101011 j'
+b1101010 i'
+b1101001 h'
+b1101000 g'
+b1100111 f'
+b1100110 e'
+b1100101 d'
+b1100100 c'
+b1100011 b'
+b1100010 a'
+b1100001 `'
+b1100000 _'
+b1011111 ^'
+b1011110 ]'
+b1011101 \'
+b1011100 ['
+b1011011 Z'
+b1011010 Y'
+b1011001 X'
+b1011000 W'
+b1010111 V'
+b1010110 U'
+b1010101 T'
+b1010100 S'
+b1010011 R'
+b1010010 Q'
+b1010001 P'
+b1010000 O'
+b1001111 N'
+b1001110 M'
+b1001101 L'
+b1001100 K'
+b1001011 J'
+b1001010 I'
+b1001001 H'
+b1001000 G'
+b1000111 F'
+b1000110 E'
+b1000101 D'
+b1000100 C'
+b1000011 B'
+b1000010 A'
+b1000001 @'
+b1000000 ?'
+b111111 >'
+b111110 ='
+b111101 <'
+b111100 ;'
+b111011 :'
+b111010 9'
+b111001 8'
+b111000 7'
+b110111 6'
+b110110 5'
+b110101 4'
+b110100 3'
+b110011 2'
+b110010 1'
+b110001 0'
+b110000 /'
+b101111 .'
+b101110 -'
+b101101 ,'
+b101100 +'
+b101011 *'
+b101010 )'
+b101001 ('
+b101000 ''
+b100111 &'
+b100110 %'
+b100101 $'
+b100100 #'
+b100011 "'
+b100010 !'
+b100001 ~&
+b100000 }&
+b11111 |&
+b11110 {&
+b11101 z&
+b11100 y&
+b11011 x&
+b11010 w&
+b11001 v&
+b11000 u&
+b10111 t&
+b10110 s&
+b10101 r&
+b10100 q&
+b10011 p&
+b10010 o&
+b10001 n&
+b10000 m&
+b1111 l&
+b1110 k&
+b1101 j&
+b1100 i&
+b1011 h&
+b1010 g&
+b1001 f&
+b1000 e&
+b111 d&
+b110 c&
+b101 b&
+b100 a&
+b11 `&
+b10 _&
+b1 ^&
+b0 ]&
+b11111111 \&
+b11111110 [&
+b11111101 Z&
+b11111100 Y&
+b11111011 X&
+b11111010 W&
+b11111001 V&
+b11111000 U&
+b11110111 T&
+b11110110 S&
+b11110101 R&
+b11110100 Q&
+b11110011 P&
+b11110010 O&
+b11110001 N&
+b11110000 M&
+b11101111 L&
+b11101110 K&
+b11101101 J&
+b11101100 I&
+b11101011 H&
+b11101010 G&
+b11101001 F&
+b11101000 E&
+b11100111 D&
+b11100110 C&
+b11100101 B&
+b11100100 A&
+b11100011 @&
+b11100010 ?&
+b11100001 >&
+b11100000 =&
+b11011111 <&
+b11011110 ;&
+b11011101 :&
+b11011100 9&
+b11011011 8&
+b11011010 7&
+b11011001 6&
+b11011000 5&
+b11010111 4&
+b11010110 3&
+b11010101 2&
+b11010100 1&
+b11010011 0&
+b11010010 /&
+b11010001 .&
+b11010000 -&
+b11001111 ,&
+b11001110 +&
+b11001101 *&
+b11001100 )&
+b11001011 (&
+b11001010 '&
+b11001001 &&
+b11001000 %&
+b11000111 $&
+b11000110 #&
+b11000101 "&
+b11000100 !&
+b11000011 ~%
+b11000010 }%
+b11000001 |%
+b11000000 {%
+b10111111 z%
+b10111110 y%
+b10111101 x%
+b10111100 w%
+b10111011 v%
+b10111010 u%
+b10111001 t%
+b10111000 s%
+b10110111 r%
+b10110110 q%
+b10110101 p%
+b10110100 o%
+b10110011 n%
+b10110010 m%
+b10110001 l%
+b10110000 k%
+b10101111 j%
+b10101110 i%
+b10101101 h%
+b10101100 g%
+b10101011 f%
+b10101010 e%
+b10101001 d%
+b10101000 c%
+b10100111 b%
+b10100110 a%
+b10100101 `%
+b10100100 _%
+b10100011 ^%
+b10100010 ]%
+b10100001 \%
+b10100000 [%
+b10011111 Z%
+b10011110 Y%
+b10011101 X%
+b10011100 W%
+b10011011 V%
+b10011010 U%
+b10011001 T%
+b10011000 S%
+b10010111 R%
+b10010110 Q%
+b10010101 P%
+b10010100 O%
+b10010011 N%
+b10010010 M%
+b10010001 L%
+b10010000 K%
+b10001111 J%
+b10001110 I%
+b10001101 H%
+b10001100 G%
+b10001011 F%
+b10001010 E%
+b10001001 D%
+b10001000 C%
+b10000111 B%
+b10000110 A%
+b10000101 @%
+b10000100 ?%
+b10000011 >%
+b10000010 =%
+b10000001 <%
+b10000000 ;%
+b1111111 :%
+b1111110 9%
+b1111101 8%
+b1111100 7%
+b1111011 6%
+b1111010 5%
+b1111001 4%
+b1111000 3%
+b1110111 2%
+b1110110 1%
+b1110101 0%
+b1110100 /%
+b1110011 .%
+b1110010 -%
+b1110001 ,%
+b1110000 +%
+b1101111 *%
+b1101110 )%
+b1101101 (%
+b1101100 '%
+b1101011 &%
+b1101010 %%
+b1101001 $%
+b1101000 #%
+b1100111 "%
+b1100110 !%
+b1100101 ~$
+b1100100 }$
+b1100011 |$
+b1100010 {$
+b1100001 z$
+b1100000 y$
+b1011111 x$
+b1011110 w$
+b1011101 v$
+b1011100 u$
+b1011011 t$
+b1011010 s$
+b1011001 r$
+b1011000 q$
+b1010111 p$
+b1010110 o$
+b1010101 n$
+b1010100 m$
+b1010011 l$
+b1010010 k$
+b1010001 j$
+b1010000 i$
+b1001111 h$
+b1001110 g$
+b1001101 f$
+b1001100 e$
+b1001011 d$
+b1001010 c$
+b1001001 b$
+b1001000 a$
+b1000111 `$
+b1000110 _$
+b1000101 ^$
+b1000100 ]$
+b1000011 \$
+b1000010 [$
+b1000001 Z$
+b1000000 Y$
+b111111 X$
+b111110 W$
+b111101 V$
+b111100 U$
+b111011 T$
+b111010 S$
+b111001 R$
+b111000 Q$
+b110111 P$
+b110110 O$
+b110101 N$
+b110100 M$
+b110011 L$
+b110010 K$
+b110001 J$
+b110000 I$
+b101111 H$
+b101110 G$
+b101101 F$
+b101100 E$
+b101011 D$
+b101010 C$
+b101001 B$
+b101000 A$
+b100111 @$
+b100110 ?$
+b100101 >$
+b100100 =$
+b100011 <$
+b100010 ;$
+b100001 :$
+b100000 9$
+b11111 8$
+b11110 7$
+b11101 6$
+b11100 5$
+b11011 4$
+b11010 3$
+b11001 2$
+b11000 1$
+b10111 0$
+b10110 /$
+b10101 .$
+b10100 -$
+b10011 ,$
+b10010 +$
+b10001 *$
+b10000 )$
+b1111 ($
+b1110 '$
+b1101 &$
+b1100 %$
+b1011 $$
+b1010 #$
+b1001 "$
+b1000 !$
+b111 ~#
+b110 }#
+b101 |#
+b100 {#
+b11 z#
+b10 y#
+b1 x#
+b0 w#
+b11111111 v#
+b11111110 u#
+b11111101 t#
+b11111100 s#
+b11111011 r#
+b11111010 q#
+b11111001 p#
+b11111000 o#
+b11110111 n#
+b11110110 m#
+b11110101 l#
+b11110100 k#
+b11110011 j#
+b11110010 i#
+b11110001 h#
+b11110000 g#
+b11101111 f#
+b11101110 e#
+b11101101 d#
+b11101100 c#
+b11101011 b#
+b11101010 a#
+b11101001 `#
+b11101000 _#
+b11100111 ^#
+b11100110 ]#
+b11100101 \#
+b11100100 [#
+b11100011 Z#
+b11100010 Y#
+b11100001 X#
+b11100000 W#
+b11011111 V#
+b11011110 U#
+b11011101 T#
+b11011100 S#
+b11011011 R#
+b11011010 Q#
+b11011001 P#
+b11011000 O#
+b11010111 N#
+b11010110 M#
+b11010101 L#
+b11010100 K#
+b11010011 J#
+b11010010 I#
+b11010001 H#
+b11010000 G#
+b11001111 F#
+b11001110 E#
+b11001101 D#
+b11001100 C#
+b11001011 B#
+b11001010 A#
+b11001001 @#
+b11001000 ?#
+b11000111 >#
+b11000110 =#
+b11000101 <#
+b11000100 ;#
+b11000011 :#
+b11000010 9#
+b11000001 8#
+b11000000 7#
+b10111111 6#
+b10111110 5#
+b10111101 4#
+b10111100 3#
+b10111011 2#
+b10111010 1#
+b10111001 0#
+b10111000 /#
+b10110111 .#
+b10110110 -#
+b10110101 ,#
+b10110100 +#
+b10110011 *#
+b10110010 )#
+b10110001 (#
+b10110000 '#
+b10101111 &#
+b10101110 %#
+b10101101 $#
+b10101100 ##
+b10101011 "#
+b10101010 !#
+b10101001 ~"
+b10101000 }"
+b10100111 |"
+b10100110 {"
+b10100101 z"
+b10100100 y"
+b10100011 x"
+b10100010 w"
+b10100001 v"
+b10100000 u"
+b10011111 t"
+b10011110 s"
+b10011101 r"
+b10011100 q"
+b10011011 p"
+b10011010 o"
+b10011001 n"
+b10011000 m"
+b10010111 l"
+b10010110 k"
+b10010101 j"
+b10010100 i"
+b10010011 h"
+b10010010 g"
+b10010001 f"
+b10010000 e"
+b10001111 d"
+b10001110 c"
+b10001101 b"
+b10001100 a"
+b10001011 `"
+b10001010 _"
+b10001001 ^"
+b10001000 ]"
+b10000111 \"
+b10000110 ["
+b10000101 Z"
+b10000100 Y"
+b10000011 X"
+b10000010 W"
+b10000001 V"
+b10000000 U"
+b1111111 T"
+b1111110 S"
+b1111101 R"
+b1111100 Q"
+b1111011 P"
+b1111010 O"
+b1111001 N"
+b1111000 M"
+b1110111 L"
+b1110110 K"
+b1110101 J"
+b1110100 I"
+b1110011 H"
+b1110010 G"
+b1110001 F"
+b1110000 E"
+b1101111 D"
+b1101110 C"
+b1101101 B"
+b1101100 A"
+b1101011 @"
+b1101010 ?"
+b1101001 >"
+b1101000 ="
+b1100111 <"
+b1100110 ;"
+b1100101 :"
+b1100100 9"
+b1100011 8"
+b1100010 7"
+b1100001 6"
+b1100000 5"
+b1011111 4"
+b1011110 3"
+b1011101 2"
+b1011100 1"
+b1011011 0"
+b1011010 /"
+b1011001 ."
+b1011000 -"
+b1010111 ,"
+b1010110 +"
+b1010101 *"
+b1010100 )"
+b1010011 ("
+b1010010 '"
+b1010001 &"
+b1010000 %"
+b1001111 $"
+b1001110 #"
+b1001101 ""
+b1001100 !"
+b1001011 ~
+b1001010 }
+b1001001 |
+b1001000 {
+b1000111 z
+b1000110 y
+b1000101 x
+b1000100 w
+b1000011 v
+b1000010 u
+b1000001 t
+b1000000 s
+b111111 r
+b111110 q
+b111101 p
+b111100 o
+b111011 n
+b111010 m
+b111001 l
+b111000 k
+b110111 j
+b110110 i
+b110101 h
+b110100 g
+b110011 f
+b110010 e
+b110001 d
+b110000 c
+b101111 b
+b101110 a
+b101101 `
+b101100 _
+b101011 ^
+b101010 ]
+b101001 \
+b101000 [
+b100111 Z
+b100110 Y
+b100101 X
+b100100 W
+b100011 V
+b100010 U
+b100001 T
+b100000 S
+b11111 R
+b11110 Q
+b11101 P
+b11100 O
+b11011 N
+b11010 M
+b11001 L
+b11000 K
+b10111 J
+b10110 I
+b10101 H
+b10100 G
+b10011 F
+b10010 E
+b10001 D
+b10000 C
+b1111 B
+b1110 A
+b1101 @
+b1100 ?
+b1011 >
+b1010 =
+b1001 <
+b1000 ;
+b111 :
+b110 9
+b101 8
+b100 7
+b11 6
+b10 5
+b1 4
+b0 3
+$end
+#0
+$dumpvars
+bx 2
+bx 1
+bx 0
+bx /
+x.
+x-
+bx ,
+bx +
+0*
+0)
+x(
+bx '
+x&
+x%
+x$
+bz #
+z"
+bx !
+$end
+#5000
+1)
+#10000
+0)
+#15000
+1)
+#20000
+0)
+1*
+#25000
+1)
+#30000
+0)
+#35000
+1)
+#40000
+0)
+#45000
+1)
+#50000
+0)
+#55000
+1)
+#60000
+0)
+#65000
+1)
+#70000
+0)
+#75000
+1)
+#80000
+0)
+#85000
+1)
+#90000
+0)
+#95000
+1)
+#100000
+0)
+#105000
+1)
+#110000
+0)
+#115000
+1)
+#120000
+0)
+#125000
+1)
+#130000
+0)
+#135000
+1)
+#140000
+0)
+#145000
+1)
+#150000
+0)
+#155000
+1)
+#160000
+0)
+#165000
+1)
+#170000
+0)
+#175000
+1)
+#180000
+0)
+#185000
+1)
+#190000
+0)
+#195000
+1)
+#200000
+0)
+#205000
+1)
+#210000
+0)
+#215000
+1)
+#220000
+0)
+#225000
+1)
+#230000
+0)
+#235000
+1)
+#240000
+0)
+#245000
+1)
+#250000
+0)
+#255000
+1)
+#260000
+0)
+#265000
+1)
+#270000
+0)
+#275000
+1)
+#280000
+0)
+#285000
+1)
+#290000
+0)
+#295000
+1)
+#300000
+0)
+#305000
+1)
+#310000
+0)
+#315000
+1)
+#320000
+0)
+#325000
+1)
+#330000
+0)
+#335000
+1)
+#340000
+0)
+#345000
+1)
+#350000
+0)
+#355000
+1)
+#360000
+0)
+#365000
+1)
+#370000
+0)
+#375000
+1)
+#380000
+0)
+#385000
+1)
+#390000
+0)
+#395000
+1)
+#400000
+0)
+#405000
+1)
+#410000
+0)
+#415000
+1)
+#420000
+0)
+#425000
+1)
+#430000
+0)
+#435000
+1)
+#440000
+0)
+#445000
+1)
+#450000
+0)
+#455000
+1)
+#460000
+0)
+#465000
+1)
+#470000
+0)
+#475000
+1)
+#480000
+0)
+#485000
+1)
+#490000
+0)
+#495000
+1)
+#500000
+0)
+#505000
+1)
+#510000
+0)
+#515000
+1)
+#520000
+0)
+#525000
+1)
+#530000
+0)
+#535000
+1)
+#540000
+0)
+#545000
+1)
+#550000
+0)
+#555000
+1)
+#560000
+0)
+#565000
+1)
+#570000
+0)
+#575000
+1)
+#580000
+0)
+#585000
+1)
+#590000
+0)
+#595000
+1)
+#600000
+0)
+#605000
+1)
+#610000
+0)
+#615000
+1)
+#620000
+0)
+#625000
+1)
+#630000
+0)
+#635000
+1)
+#640000
+0)
+#645000
+1)
+#650000
+0)
+#655000
+1)
+#660000
+0)
+#665000
+1)
+#670000
+0)
+#675000
+1)
+#680000
+0)
+#685000
+1)
+#690000
+0)
+#695000
+1)
+#700000
+0)
+#705000
+1)
+#710000
+0)
+#715000
+1)
+#720000
+0)
+#725000
+1)
+#730000
+0)
+#735000
+1)
+#740000
+0)
+#745000
+1)
+#750000
+0)
+#755000
+1)
+#760000
+0)
+#765000
+1)
+#770000
+0)
+#775000
+1)
+#780000
+0)
+#785000
+1)
+#790000
+0)
+#795000
+1)
+#800000
+0)
+#805000
+1)
+#810000
+0)
+#815000
+1)
+#820000
+0)
+#825000
+1)
+#830000
+0)
+#835000
+1)
+#840000
+0)
+#845000
+1)
+#850000
+0)
+#855000
+1)
+#860000
+0)
+#865000
+1)
+#870000
+0)
+#875000
+1)
+#880000
+0)
+#885000
+1)
+#890000
+0)
+#895000
+1)
+#900000
+0)
+#905000
+1)
+#910000
+0)
+#915000
+1)
+#920000
+0)
+#925000
+1)
+#930000
+0)
+#935000
+1)
+#940000
+0)
+#945000
+1)
+#950000
+0)
+#955000
+1)
+#960000
+0)
+#965000
+1)
+#970000
+0)
+#975000
+1)
+#980000
+0)
+#985000
+1)
+#990000
+0)
+#995000
+1)
+#1000000
+0)
+#1005000
+1)
+#1010000
+0)
+#1015000
+1)
+#1020000
+0)

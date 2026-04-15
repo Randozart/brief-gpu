@@ -1,4 +1,0 @@
-// Minimal test
-import gpu_core;
-let my_data: UInt @ 0x40000008 /0..15 = 0;
-// Just compile - no transactions

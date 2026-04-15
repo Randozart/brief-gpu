@@ -53,6 +53,43 @@ Output: `gpu_core.sv`, `gpu_core_tb.sv`
 4. Poll `gpu_status` until `2` (done)
 5. Read results from `vec_R`
 
-## Performance
+## Performance & Efficiency Benchmarks
 
-At 100MHz: **25.6 GOPS** (256 lanes × 100M ops/sec)
+### 1. Raw Compute Throughput (Peak)
+- **Parallelism:** 256 Lanes
+- **Operation Width:** 16-bit Signed Integers
+- **Clock Speed:** 100 MHz (per `hardware.toml`)
+- **Cycles per Compute:** 1 Cycle
+- **Peak Performance:** **25.6 GOPS** (Giga-Operations Per Second)
+- **Peak Internal Bandwidth:** **409.6 Gbps**
+
+### 2. Efficiency Analysis
+
+#### Hardware Density
+The design utilizes a **Spatial Architecture**. Unlike a CPU which reuses a few ALUs over time (temporal), this design maps all 256 ALUs onto the silicon fabric simultaneously.
+- **Estimated Registers:** ~12,288 bits for vector storage.
+- **ALU Efficiency:** 100% utilization of compute resources during the execution cycle.
+
+#### IO Utilization (The Bottleneck)
+While the core is capable of 25.6 GOPS, the overall system efficiency is currently limited by the AXI-Lite MMIO interface.
+- **Loading Data (256 writes):** ~256 cycles
+- **Execution:** 1 cycle
+- **Retrieving Data (256 reads):** ~256 cycles
+- **Total Pipeline Cycles:** ~513 cycles
+- **Real-World Utilization Ratio:** **~0.19%**
+
+*Note: To improve efficiency, a DMA engine capable of burst transfers should be implemented.*
+
+### 3. Simulation & Verification
+The design includes a SystemVerilog testbench for cycle-accurate verification.
+
+**Run Simulation:**
+```bash
+iverilog -g2012 -o gpu_sim gpu_interface_tb.sv gpu_interface.sv gpu_core.sv
+vvp gpu_sim
+```
+
+**View Waveforms:**
+```bash
+gtkwave waveform.vcd
+```

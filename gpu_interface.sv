@@ -4,18 +4,21 @@ module gpu_interface (
     output logic [7:0] gpu_status /* pin: A1 */,
     output logic [3:0] opcode /* pin: A2 */,
     output logic [15:0] read_data /* pin: A3 */,
+    output logic [15:0] write_data /* pin: A4 */,
     output logic [15:0] addr /* pin: A5 */,
     output logic  control /* pin: A6 */,
     input logic  axi_awvalid /* pin: A7 */,
+    input logic [15:0] axi_awaddr /* pin: A8 */,
     input logic  axi_wvalid /* pin: A9 */,
     input logic [15:0] axi_wdata /* pin: A10 */,
     input logic  axi_bready /* pin: A11 */,
+    input logic  axi_arvalid /* pin: A12 */,
     input logic [15:0] axi_araddr /* pin: A13 */,
     input logic  axi_rready /* pin: A14 */,
-    output logic  axi_rvalid /* pin: A15 */
+    output logic  axi_rvalid /* pin: A15 */,
+    output logic [15:0] axi_rdata /* pin: A16 */
 );
 
-    logic  axi_bready;
     logic signed [15:0] vec_A [0:255];
     logic signed [15:0] vec_B [0:255];
     logic signed [15:0] vec_R [0:255];
@@ -51,14 +54,6 @@ module gpu_interface (
         end
         return 0;
     endfunction
-
-    // Logic for variable: axi_bready
-    always_ff @(posedge clk) begin
-        if (!rst_n) begin
-            axi_bready <= 1'b0;
-        end else begin
-        end
-    end
 
     // Logic for variable: vec_A
     genvar vec_A_i;
@@ -101,43 +96,5 @@ module gpu_interface (
             end
         end
     endgenerate
-
-    // Logic for variable: write_data
-    always_ff @(posedge clk) begin
-        if (!rst_n) begin
-            write_data <= 0;
-        end else begin
-            if ((axi_awvalid && axi_wvalid)) begin
-                write_data <= axi_wdata;
-            end
-        end
-    end
-
-    // Logic for trigger: axi_awaddr
-    always_ff @(posedge clk) begin
-        if (!rst_n) begin
-            axi_awaddr <= 1'b0;
-        end else begin
-        end
-    end
-
-    // Logic for trigger: axi_arvalid
-    always_ff @(posedge clk) begin
-        if (!rst_n) begin
-            axi_arvalid <= 1'b0;
-        end else begin
-        end
-    end
-
-    // Logic for variable: axi_rdata
-    always_ff @(posedge clk) begin
-        if (!rst_n) begin
-            axi_rdata <= 0;
-        end else begin
-            if (axi_arvalid) begin
-                axi_rdata <= read_data;
-            end
-        end
-    end
 
 endmodule
