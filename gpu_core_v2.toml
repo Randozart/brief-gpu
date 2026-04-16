@@ -12,20 +12,18 @@ address_width = 16
 data_width = 32
 
 [memory]
-# Control registers (flip-flops)
-"0x40000000" = { size = 1, type = "flipflop", element_bits = 8 }
-"0x40000004" = { size = 1, type = "flipflop", element_bits = 8 }
-"0x40000008" = { size = 1, type = "flipflop", element_bits = 4 }
-
-# Vector buffers (BRAM)
+# Only Vector buffers (BRAM) - staying internal
 "0x40000010" = { size = 32, type = "bram", element_bits = 16 }
 "0x40000020" = { size = 32, type = "bram", element_bits = 16 }
 "0x40000030" = { size = 32, type = "bram", element_bits = 16 }
 
 [io]
-"0x40000000" = { pin = "A1" }
-"0x40000004" = { pin = "A2" }
-"0x40000008" = { pin = "A3" }
-"0x40000010" = { pin = "A4" }
-"0x40000020" = { pin = "A5" }
-"0x40000030" = { pin = "A6" }
+# These are the actual physical pins for the chip
+"0x40000000" = { pin = "A1", direction = "input" }   # cpu_control
+"0x40000004" = { pin = "A2", direction = "output" }  # status
+"0x40000008" = { pin = "A3", direction = "input" }   # cpu_opcode
+"0x40000040" = { pin = "A4", direction = "input" }   # cpu_write_data
+"0x40000044" = { pin = "A5", direction = "input" }   # cpu_write_addr
+"0x40000048" = { pin = "A6", direction = "input" }   # cpu_write_en
+"0x4000004C" = { pin = "A7", direction = "input" }   # cpu_read_en
+"0x40000050" = { pin = "A8", direction = "output" }  # read_data

@@ -1,14 +1,46 @@
 // gpu_core_v2.ebv - 32-lane GPU with BRAM
 
-// === Control Registers ===
-let control: UInt @ 0x40000000 /0..7 = 0;  // 0=Idle, 1=Load Ping, 2=Load Pong, 3=Execute, 4=Read
+// === CPU Triggers (Inputs from External Bus) ===
+trg cpu_control: UInt @ 0x40000000 /0..7;
+trg cpu_opcode: UInt @ 0x40000008 /0..3;
+trg cpu_write_data: Int @ 0x40000040 / x16;
+trg cpu_write_addr: UInt @ 0x40000044 /0..15;
+trg cpu_write_en: Bool @ 0x40000048;
+trg cpu_read_en: Bool @ 0x4000004C;
+
+// === Internal Registers ===
+let control: UInt = 0;  // 0=Idle, 1=Load Ping, 2=Load Pong, 3=Execute, 4=Read
 let status: UInt @ 0x40000004 /0..7 = 0;   // 0=Idle, 1=Busy, 2=Done
-let opcode: UInt @ 0x40000008 /0..3 = 0;
+let opcode: UInt = 0;
 
 // === 32-element vectors ===
 let ping_buffer: Int[32] @ 0x40000010 / x16;
 let pong_buffer: Int[32] @ 0x40000020 / x16;
 let result_buffer: Int[32] @ 0x40000030 / x16;
+
+let read_data: Int @ 0x40000050 / x16 = 0;
+
+// === CPU Interface Transactions ===
+rct txn update_params [cpu_control != control] [control == cpu_control] {
+    &control = cpu_control;
+    &opcode = cpu_opcode;
+    term;
+};
+
+rct txn load_ping [cpu_write_en && control == 1] [ping_buffer[cpu_write_addr] == cpu_write_data] {
+    &ping_buffer[cpu_write_addr] = cpu_write_data;
+    term;
+};
+
+rct txn load_pong [cpu_write_en && control == 2] [pong_buffer[cpu_write_addr] == cpu_write_data] {
+    &pong_buffer[cpu_write_addr] = cpu_write_data;
+    term;
+};
+
+rct txn read_result [cpu_read_en && control == 4] [read_data == result_buffer[cpu_write_addr]] {
+    &read_data = result_buffer[cpu_write_addr];
+    term;
+};
 
 // === ALU Definition ===
 defn vector_alu(a: Int, b: Int, op: UInt) -> Int [true][true] {
