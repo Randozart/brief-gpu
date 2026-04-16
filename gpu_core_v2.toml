@@ -1,0 +1,31 @@
+[project]
+name = "gpu_core_v2"
+version = "1.0.0"
+
+[target]
+fpga = "generic"
+clock_hz = 100_000_000
+
+[interface]
+name = "axi4-lite"
+address_width = 16
+data_width = 32
+
+[memory]
+# Control registers (flip-flops)
+"0x40000000" = { size = 1, type = "flipflop", element_bits = 8 }
+"0x40000004" = { size = 1, type = "flipflop", element_bits = 8 }
+"0x40000008" = { size = 1, type = "flipflop", element_bits = 4 }
+
+# Vector buffers (BRAM)
+"0x40000010" = { size = 32, type = "bram", element_bits = 16 }
+"0x40000020" = { size = 32, type = "bram", element_bits = 16 }
+"0x40000030" = { size = 32, type = "bram", element_bits = 16 }
+
+[io]
+"0x40000000" = { pin = "A1" }
+"0x40000004" = { pin = "A2" }
+"0x40000008" = { pin = "A3" }
+"0x40000010" = { pin = "A4" }
+"0x40000020" = { pin = "A5" }
+"0x40000030" = { pin = "A6" }

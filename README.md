@@ -1,13 +1,39 @@
 # GPU Core - Experimental SIMD Accelerator
 
-A 256-lane vector ALU coprocessor written in [Brief](https://github.com/Randozart/brief-lang).
+A vector ALU coprocessor written in [Brief](https://github.com/Randozart/brief-lang).
 
 ## Architecture
 
+### V1 (Legacy)
 - **256 parallel lanes** of 16-bit computation
-- **4-bit opcode** (16 instructions, 9 defined)
-- **MMIO interface** for CPU communication
-- **AXI4-Lite interface** for SoC integration
+- **AXI4-Lite interface** for MMIO
+- Flip-flop based vector storage (Resource intensive)
+
+### V2 (Current)
+- **32 parallel lanes** (Scalable)
+- **Hardcoded Block RAM (BRAM)** staging area via `hardware_lib`
+- **Spec-driven validation**: Compiler cross-verifies `.ebv` logic against `hardware.toml` constraints
+- **Modular Interface Support**: AXI4-Lite (control) and AXI4-Stream (data) support via spec library
+- **Extended ISA**: Added Bitwise XOR (`^`), Shift Left (`<<`), and Shift Right (`>>`)
+
+## Hardware Specification System
+
+Brief-Verilog now uses a three-layer hardware specification system:
+
+1. **Brief (`.ebv`)**: Pure behavioral logic and data flow.
+2. **Hardware Library (`hardware_lib/`)**: Reusable specifications for interfaces (AXI, PCIe, USB), memory types (BRAM, FF, ROM), and target FPGAs/ASICs.
+3. **Project Config (`hardware.toml`)**: Maps project variables to specific hardware resources and interfaces.
+
+## Memory Map (V2 Default)
+
+| Address | Register | Description |
+|---------|-----------|--------------|
+| 0x40000000 | control | 0=Idle, 3=Execute |
+| 0x40000004 | status | 0=Idle, 1=Running, 2=Done |
+| 0x40000008 | opcode | Operation to execute |
+| 0x40000010 | ping_buffer[32] | Input vector A (BRAM) |
+| 0x40000020 | pong_buffer[32] | Input vector B (BRAM) |
+| 0x40000030 | result_buffer[32] | Result vector (BRAM) |
 
 ## Operations (Opcodes)
 
@@ -23,24 +49,12 @@ A 256-lane vector ALU coprocessor written in [Brief](https://github.com/Randozar
 | 7 | ReLU | `max(0, a)` |
 | 8 | Mask | `b == 0 ? a : b` |
 
-## Memory Map
-
-| Address | Register | Description |
-|---------|-----------|--------------|
-| 0x40000000 | gpu_status | 0=Idle, 1=Running, 2=Done |
-| 0x40000004 | opcode | Operation to execute |
-| 0x40001000 | vec_A[256] | Input vector A |
-| 0x40002000 | vec_B[256] | Input vector B |
-| 0x40003000 | vec_R[256] | Result vector |
-
 ## Compilation
 
-Assuming brief-lang and brief-gpu share the same folder:
+V2 requires a hardware configuration file:
 
 ```bash
-cd ../brief-lang
-cargo build --release
-./target/release/brief-compiler verilog ../brief-gpu/gpu_core.ebv --hw ../brief-gpu/hardware.toml --out ../gpu
+./brief-compiler verilog gpu_core_v2.ebv --hw gpu_core_v2.toml --out v2_out
 ```
 
 Output: `gpu_core.sv`, `gpu_core_tb.sv`

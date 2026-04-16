@@ -1,0 +1,38 @@
+// gpu_core_v2.ebv - 32-lane GPU with BRAM
+
+// === Control Registers ===
+let control: UInt @ 0x40000000 /0..7 = 0;  // 0=Idle, 1=Load Ping, 2=Load Pong, 3=Execute, 4=Read
+let status: UInt @ 0x40000004 /0..7 = 0;   // 0=Idle, 1=Busy, 2=Done
+let opcode: UInt @ 0x40000008 /0..3 = 0;
+
+// === 32-element vectors ===
+let ping_buffer: Int[32] @ 0x40000010 / x16;
+let pong_buffer: Int[32] @ 0x40000020 / x16;
+let result_buffer: Int[32] @ 0x40000030 / x16;
+
+// === ALU Definition ===
+defn vector_alu(a: Int, b: Int, op: UInt) -> Int [true][true] {
+    [op == 0] term a + b;       // Addition
+    [op == 1] term a - b;       // Subtraction
+    [op == 2] term a * b;       // Multiplication
+    [op == 3] term a ^ b;       // XOR
+    [op == 4] term a & b;       // AND
+    [op == 5] term a << b;      // Shift left
+    [op == 6] term a >> b;      // Shift right
+    [op == 7] {                 // ReLU
+        [a < 0] term 0;
+        term a;
+    };
+    [op == 8] {                 // Max-like selection
+        [b == 0] term a;
+        term b;
+    };
+    term 0; 
+};
+
+// === Execute Transaction ===
+rct txn execute [control == 3][status == 2] {
+    &result_buffer = vector_alu(ping_buffer, pong_buffer, opcode);
+    &status = 2;
+    term;
+};
